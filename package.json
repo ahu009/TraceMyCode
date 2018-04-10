@@ -16,16 +16,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.intuit.com/CTG-UI/Navbar-ui"
+    "url": "https://github.com/ahu009/TraceMyCode"
   },
   "engines": {
     "node": "6.9.2"
   },
-  "author": "Avanish Pathak",
+  "author": "Abe hu",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.0.0",
+    "firebase": "^4.9.1",
     "react": "15.6.1",
-    "react-dom": "15.4.2"
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "15.4.2",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "ava": {
     "require": [
@@ -35,8 +40,8 @@
     ],
     "babel": "inherit",
     "concurrency": 5,
-		"failFast": true,
-		"tap": true,
+    "failFast": true,
+    "tap": true,
     "verbose": true
   },
   "devDependencies": {

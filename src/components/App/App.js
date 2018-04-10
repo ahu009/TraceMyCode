@@ -1,7 +1,9 @@
 import React from 'react';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+
 
 import style from './App.scss';
-import UIComponent from './../UIComponent';
+import NavBar from './../NavBar';
 
 /**
  * App Component
@@ -14,9 +16,12 @@ export default class App extends React.Component {
    */
   render () {
     return (
-      <div className={style.container}>
-        <UIComponent />
-      </div>
+      <Router>
+        <div className={style.App}>
+          <Route path='/' component={NavBar} />
+        </div>
+      </Router>
+
     );
   }
 }

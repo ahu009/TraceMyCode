@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, FormGroup, FormControl } from 'react-bootstrap';
+import { connect } from 'react-redux'
 
 import style from './NavBar.scss';
 
 import Search from './Search';
-
+import { toggleShowCreate } from '../../actions';
 
 /**
  * UI Component
@@ -39,7 +40,7 @@ class NavBar extends React.Component {
 
         <Button
           bsClass={style.create}
-          onClick={() => {}}>
+          onClick={() => this.props.toggleShowCreate(true)}>
           Create Sandbox
         </Button>
       </div>
@@ -47,4 +48,8 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+const mapDispatchToProps = dispatch => ({
+  toggleShowCreate: shouldShowModal => dispatch(toggleShowCreate(shouldShowModal))
+})
+ 
+export default connect(null, mapDispatchToProps)(NavBar)

@@ -38,7 +38,6 @@ class Search extends React.Component {
     //placeholder
     let value = this.state.value;
     if (value != '') {
-      console.log(this.state.value);
       FirebaseRef.child("heyass").set({temp: "pleasework"})
     }
   }
